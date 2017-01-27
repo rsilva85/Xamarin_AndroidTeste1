@@ -19,6 +19,7 @@ namespace Xamarin_AndroidTeste1
         {
             base.OnCreate(savedInstanceState);
 
+            SetContentView(Resource.Layout.Outra);
             // Create your application here
         }
     }
