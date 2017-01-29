@@ -3,7 +3,7 @@ using Android.Widget;
 using Android.OS;
 using System.Data.SqlClient;
 using System;
-using System;
+using Android.Content;
 
 namespace Xamarin_AndroidTeste1
 {
@@ -18,6 +18,7 @@ namespace Xamarin_AndroidTeste1
         EditText editText_pesqCodUtente;
         Button buttonInserir;
         Button buttonPesquisar;
+        Button buttonOutra;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -38,9 +39,21 @@ namespace Xamarin_AndroidTeste1
 
             buttonInserir = FindViewById<Button>(Resource.Id.buttonInserir);
             buttonPesquisar = FindViewById<Button>(Resource.Id.buttonPesquisar);
+            buttonOutra = FindViewById<Button>(Resource.Id.buttonOutra);
 
             buttonInserir.Click += Inserir_OnClick;
             buttonPesquisar.Click += Pesquisar_OnClick;
+            buttonOutra.Click += ButtonOutra_Click;
+
+
+
+        }
+
+        private void ButtonOutra_Click(object sender, EventArgs e)
+        {
+
+            var OutraIntent = new Intent(this, typeof(OutraActivity));
+            StartActivity(OutraIntent);
 
 
 

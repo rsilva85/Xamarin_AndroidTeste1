@@ -79,6 +79,9 @@ namespace Xamarin_AndroidTeste1
 			// aapt resource value: 0x7f070004
 			public const int buttonInserir = 2131165188;
 			
+			// aapt resource value: 0x7f07000a
+			public const int buttonOutra = 2131165194;
+			
 			// aapt resource value: 0x7f070008
 			public const int buttonPesquisar = 2131165192;
 			
@@ -91,6 +94,9 @@ namespace Xamarin_AndroidTeste1
 			// aapt resource value: 0x7f070007
 			public const int editText_pesqCodUtente = 2131165191;
 			
+			// aapt resource value: 0x7f07000c
+			public const int gridView_teste = 2131165196;
+			
 			// aapt resource value: 0x7f070000
 			public const int textView1 = 2131165184;
 			
@@ -102,6 +108,9 @@ namespace Xamarin_AndroidTeste1
 			
 			// aapt resource value: 0x7f070005
 			public const int textView_Label1 = 2131165189;
+			
+			// aapt resource value: 0x7f07000b
+			public const int textView_outra = 2131165195;
 			
 			// aapt resource value: 0x7f070009
 			public const int textView_pesqNomeUtente = 2131165193;

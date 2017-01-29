@@ -56,7 +56,7 @@ public class DbConnection
             // Do work here; connection closed on following line.
             SqlCommand cmd = new SqlCommand(StringCmd);
             cmd.Connection = connection;
-
+            
             return cmd.ExecuteReader();
 
         }
