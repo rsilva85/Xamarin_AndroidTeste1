@@ -20,10 +20,10 @@ namespace Xamarin_AndroidTeste1
     {
 
         //DbConnection dbCon;
-        GridView gvTeste;
-        ArrayList lista;
+        ListView lvTeste;
+        List<string[]> lista;
 
-        ArrayAdapter adapt;
+        
         SqlDataReader dr;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -33,10 +33,10 @@ namespace Xamarin_AndroidTeste1
             // Create your application here
 
             //dbCon = new DbConnection("Persist Security Info=False;Integrated Security=false;Initial Catalog=SIGED;Data Source=192.168.1.69;User=sa;Password=sqlsa");
-            gvTeste = FindViewById<GridView>(Resource.Id.gridView_teste);
+            lvTeste = FindViewById<ListView>(Resource.Id.listView);
 
             //dr = dbCon.QueryData("Select DNT_NUM,DNT_NOME from BGNDNT");
-            lista = new ArrayList();
+            lista = new List<string[]>();
             using (SqlConnection connection = new SqlConnection("Persist Security Info=False;Integrated Security=false;Initial Catalog=SIGED;Data Source=192.168.1.69;User=sa;Password=sqlsa"))
             {
                 connection.Open();
@@ -48,15 +48,25 @@ namespace Xamarin_AndroidTeste1
 
                 while (dr.Read())
                 {
-                    lista.Add(dr["DNT_NOME"].ToString());
+                    lista.Add(new String[] {
+                        dr["DNT_NUM"].ToString()
+                        , dr["DNT_NOME"].ToString()
+                    });
                     
                 }
 
             }
 
+            lvTeste.Adapter = new TableAdapter(this, lista);
+            lvTeste.ItemClick += LvTeste_ItemClick;
+              
+        }
 
-            adapt = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, lista);
-            gvTeste.Adapter = adapt;
+        private void LvTeste_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            var listView = sender as ListView;
+            var t = lista[e.Position];
+            Android.Widget.Toast.MakeText(this, t[1], Android.Widget.ToastLength.Short).Show();
         }
     }
 }

@@ -95,7 +95,7 @@ namespace Xamarin_AndroidTeste1
 			public const int editText_pesqCodUtente = 2131165191;
 			
 			// aapt resource value: 0x7f07000c
-			public const int gridView_teste = 2131165196;
+			public const int listView = 2131165196;
 			
 			// aapt resource value: 0x7f070000
 			public const int textView1 = 2131165184;
