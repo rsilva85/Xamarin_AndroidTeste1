@@ -95,7 +95,10 @@ namespace Xamarin_AndroidTeste1
 			public const int editText_pesqCodUtente = 2131165191;
 			
 			// aapt resource value: 0x7f07000c
-			public const int listView = 2131165196;
+			public const int linearLayout1 = 2131165196;
+			
+			// aapt resource value: 0x7f07000b
+			public const int listView = 2131165195;
 			
 			// aapt resource value: 0x7f070000
 			public const int textView1 = 2131165184;
@@ -109,8 +112,32 @@ namespace Xamarin_AndroidTeste1
 			// aapt resource value: 0x7f070005
 			public const int textView_Label1 = 2131165189;
 			
-			// aapt resource value: 0x7f07000b
-			public const int textView_outra = 2131165195;
+			// aapt resource value: 0x7f07000f
+			public const int textView_NomeUtente = 2131165199;
+			
+			// aapt resource value: 0x7f070015
+			public const int textView_getBenef = 2131165205;
+			
+			// aapt resource value: 0x7f070013
+			public const int textView_getCodPostal = 2131165203;
+			
+			// aapt resource value: 0x7f070011
+			public const int textView_getDtNasc = 2131165201;
+			
+			// aapt resource value: 0x7f070014
+			public const int textView_getEntidade = 2131165204;
+			
+			// aapt resource value: 0x7f070012
+			public const int textView_getMorada = 2131165202;
+			
+			// aapt resource value: 0x7f070010
+			public const int textView_getNomeUtente = 2131165200;
+			
+			// aapt resource value: 0x7f07000e
+			public const int textView_getnUtente = 2131165198;
+			
+			// aapt resource value: 0x7f07000d
+			public const int textView_nUtente = 2131165197;
 			
 			// aapt resource value: 0x7f070009
 			public const int textView_pesqNomeUtente = 2131165193;
@@ -133,6 +160,9 @@ namespace Xamarin_AndroidTeste1
 			
 			// aapt resource value: 0x7f030001
 			public const int Outra = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int Outra_Detalhe = 2130903042;
 			
 			static Layout()
 			{

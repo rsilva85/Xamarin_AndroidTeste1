@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Outra_DetalheActivity.cs" />
     <Compile Include="DbConnection.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="OutraActivity.cs" />
@@ -61,6 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Outra.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Outra_Detalhe.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <None Include="packages.config" />

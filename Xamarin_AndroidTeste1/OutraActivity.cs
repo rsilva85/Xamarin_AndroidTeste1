@@ -15,7 +15,7 @@ using System.Collections;
 
 namespace Xamarin_AndroidTeste1
 {
-    [Activity(Label = "OutraActivity")]
+    [Activity(Label = "Outra Activity")]
     public class OutraActivity : Activity
     {
 
@@ -41,7 +41,7 @@ namespace Xamarin_AndroidTeste1
             {
                 connection.Open();
                 // Do work here; connection closed on following line.
-                SqlCommand cmd = new SqlCommand("Select DNT_NUM,DNT_NOME from BGNDNT");
+                SqlCommand cmd = new SqlCommand("Select DNT_NUM,DNT_NOME,DNT_DATNAS, DNT_MORADA, DNT_POSTAL, DNT_SUBS, NUM_BEN from BGNDNT ");
                 cmd.Connection = connection;
 
                 dr= cmd.ExecuteReader();
@@ -51,6 +51,11 @@ namespace Xamarin_AndroidTeste1
                     lista.Add(new String[] {
                         dr["DNT_NUM"].ToString()
                         , dr["DNT_NOME"].ToString()
+                        , dr["DNT_DATNAS"].ToString()
+                        , dr["DNT_MORADA"].ToString()
+                        , dr["DNT_POSTAL"].ToString()
+                        , dr["DNT_SUBS"].ToString()
+                        , dr["NUM_BEN"].ToString()
                     });
                     
                 }
@@ -67,6 +72,18 @@ namespace Xamarin_AndroidTeste1
             var listView = sender as ListView;
             var t = lista[e.Position];
             Android.Widget.Toast.MakeText(this, t[1], Android.Widget.ToastLength.Short).Show();
+
+            var Outra_DetalheIntent = new Intent(this, typeof(Outra_DetalheActivity));
+            Outra_DetalheIntent.PutExtra("DNT_NUM", t[0]);
+            Outra_DetalheIntent.PutExtra("DNT_NOME", t[1]);
+            Outra_DetalheIntent.PutExtra("DNT_DATNAS", t[2]);
+            Outra_DetalheIntent.PutExtra("DNT_MORADA", t[3]);
+            Outra_DetalheIntent.PutExtra("DNT_POSTAL", t[4]);
+            Outra_DetalheIntent.PutExtra("DNT_SUBS", t[5]);
+            Outra_DetalheIntent.PutExtra("NUM_BEN", t[6]);
+ 
+            StartActivity(Outra_DetalheIntent);
+
         }
     }
 }
