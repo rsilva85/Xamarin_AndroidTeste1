@@ -8,9 +8,14 @@ using Android.Content;
 namespace Xamarin_AndroidTeste1
 {
     [Activity(Label = "Xamarin AndroidTeste1", MainLauncher = true, Icon = "@drawable/icon")]
+
+    
+
     public class MainActivity : Activity
     {
-        DbConnection dbCon;
+        public static String cConn = "Persist Security Info=False;Integrated Security=false;Initial Catalog=SIGED;Data Source=7.122.25.140,49172;User=sqlremote;Password=sisbit.";
+
+        public DbConnection dbCon;
         TextView textView_Label1;
         TextView textView_pesqNomeUtente;
         EditText editText_codUtente;
@@ -28,7 +33,7 @@ namespace Xamarin_AndroidTeste1
             SetContentView (Resource.Layout.Main);
             //////////////
 
-            dbCon = new DbConnection("Persist Security Info=False;Integrated Security=false;Initial Catalog=SIGED;Data Source=7.122.25.140,49172;User=sqlremote;Password=sisbit.");
+            dbCon = new DbConnection(cConn);
 
             textView_Label1 = FindViewById<TextView>(Resource.Id.textView_Label1);
             textView_pesqNomeUtente = FindViewById<TextView>(Resource.Id.textView_pesqNomeUtente);

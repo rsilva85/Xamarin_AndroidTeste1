@@ -37,7 +37,7 @@ namespace Xamarin_AndroidTeste1
 
             //dr = dbCon.QueryData("Select DNT_NUM,DNT_NOME from BGNDNT");
             lista = new List<string[]>();
-            using (SqlConnection connection = new SqlConnection("Persist Security Info=False;Integrated Security=false;Initial Catalog=SIGED;Data Source=7.122.25.140,49172;User=sqlremote;Password=sisbit."))
+            using (SqlConnection connection = new SqlConnection(MainActivity.cConn)) 
             {
                 connection.Open();
                 // Do work here; connection closed on following line.
