@@ -37,11 +37,11 @@ namespace Xamarin_AndroidTeste1
 
             //dr = dbCon.QueryData("Select DNT_NUM,DNT_NOME from BGNDNT");
             lista = new List<string[]>();
-            using (SqlConnection connection = new SqlConnection("Persist Security Info=False;Integrated Security=false;Initial Catalog=SIGED;Data Source=192.168.1.69;User=sa;Password=sqlsa"))
+            using (SqlConnection connection = new SqlConnection("Persist Security Info=False;Integrated Security=false;Initial Catalog=SIGED;Data Source=7.122.25.140,49172;User=sqlremote;Password=sisbit."))
             {
                 connection.Open();
                 // Do work here; connection closed on following line.
-                SqlCommand cmd = new SqlCommand("Select DNT_NUM,DNT_NOME,DNT_DATNAS, DNT_MORADA, DNT_POSTAL, DNT_SUBS, NUM_BEN from BGNDNT ");
+                SqlCommand cmd = new SqlCommand("Select top 10 DNT_NUM,DNT_NOME,DNT_DATNAS, DNT_MORADA, DNT_POSTAL, DNT_SUBS, NUM_BEN from BGNDNT ");
                 cmd.Connection = connection;
 
                 dr= cmd.ExecuteReader();

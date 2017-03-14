@@ -28,7 +28,7 @@ namespace Xamarin_AndroidTeste1
             SetContentView (Resource.Layout.Main);
             //////////////
 
-            dbCon = new DbConnection("Persist Security Info=False;Integrated Security=false;Initial Catalog=SIGED;Data Source=192.168.1.69;User=sa;Password=sqlsa");
+            dbCon = new DbConnection("Persist Security Info=False;Integrated Security=false;Initial Catalog=SIGED;Data Source=7.122.25.140,49172;User=sqlremote;Password=sisbit.");
 
             textView_Label1 = FindViewById<TextView>(Resource.Id.textView_Label1);
             textView_pesqNomeUtente = FindViewById<TextView>(Resource.Id.textView_pesqNomeUtente);
